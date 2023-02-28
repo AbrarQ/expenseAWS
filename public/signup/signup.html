@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://cdnjs.cloudflare.com; object-src 'none'; script-src 'self'; style-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self';">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="../CSS/signup.css">
+
+</head>
+
+<body>
+    <!--Creating a form to Take input details, which on submitting will call userDetails -->
+    <div class="signup">
+        <form onsubmit="saveuser(event)">
+            <label class="uname"> User Name</label><br>
+            <input type="text"autocomplete="username" id="uname" name="username" placeholder="User Name" required><br><br>
+            <label class="pn"> Phone Number</label><br>
+            <input type="text" id="pnumber" name="phonenumber" placeholder="Phone Number" required><br><br>
+            <label class="eid"> Email Id</label><br>
+            <input type="email" id="eid" name="emailid" placeholder="Email Id" required><br><br>
+            <label class="eid"> Password</label><br>
+            <input type="password" autocomplete="password" id="pswrd" name="emailid" placeholder="Strong Password" required><br><br><br>
+            <button class="form"  type="submit">Sign Up</button>
+            <p id="result"></p>
+        </form><br>
+        <form action="../signIN/signin.html">
+            <button>Existing User - Sign in </button>
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.3/axios.min.js"></script>
+    <script src ="./signup.js"></script>
+</body>
+</html>
+

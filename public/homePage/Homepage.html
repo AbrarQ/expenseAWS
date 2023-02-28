@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense tracker Home</title>
+    <link rel="stylesheet" href="../CSS/signup.css">
+
+</head>
+
+<body>
+    <!--Creating a form to Take input details, which on submitting will call userDetails -->
+    <div class="expensehome" id="div1">
+        <form onsubmit="saveExpense(event)" id="formtag">
+            <label> Expense Amount</label><br>
+            <input type="number" id="expenseamount" name="expamount" placeholder="Rs. XXXXX/-" required><br><br>
+            <label>Description</label><br>
+            <input type="text" id="expdescp" name="expdescription" placeholder="Ex : Dinner Party on Eid"
+                required><br><br>
+
+            <label> Category</label><br>
+            <select id="category">
+                <option value="Fuel">Income</option>
+                <option value="Fuel">Fuel</option>
+                <option value="Electricity">Electricity</option>
+                <option value="Ration">Ration</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Dining">Dining</option>
+                <option value="OTT">OTT Subscription</option>
+                <option value="Veggies">Veggies</option>
+                <option value="Dailydairy">Daily-Purchases</option>
+            </select>
+
+            <button class="form" type="submit">Submit</button>
+
+        </form><br><br>
+
+        <button style="background-color: aqua; border-radius: 1px;" type="submit" id="premium">
+            Buy Premium Membership
+        </button>
+        <p id="puser"></p>
+        <button style="background-color: burlywood; border-radius: 1px;" type="submit" id="leaderboard"
+            onclick="leaderboard()">
+            Show Leader Board</button><br> <br>
+
+        <form action="../reportGenerator/reportgenerator.html">
+            <button style="background-color: aqua; border-radius: 1px;" type="submit" id="report">
+                Generate Report
+            </button>
+        </form> <br>
+
+
+        <button class ="btn" style="background-color: rgb(173, 222, 135); border-radius: 1px;" type="submit" id="download"
+            onclick="download()">
+            Download</button><br> <br>
+        <p id="downloadResponse"></p>
+
+        <p id="oldfiles"></p>
+        <button style="background-color: rgb(216, 70, 143); border-radius: 1px;" type="submit" id="oldfiles"
+            onclick="oldfiles()">
+            Old Downloads</button><br> <br>
+
+        <!-- <button style="background-color: rgb(140, 208, 219); border-radius: 1px;" type="submit" id="page"
+            onclick="paginate()">
+            </button><br> <br> -->
+
+    </div>
+    <div class="exp">
+        
+       
+    </div>
+    <div class="float-container" style="display: inline-block;">
+
+    
+            <label style="font-weight: 800;">Expenses</label>
+            <select id="NumberofRecords" >
+                <option value="none" selected disabled hidden>
+                    Select an Option </option>
+                <option value="15">15</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <option value="75">75</option>
+                <option value="100">100</option>
+            </select> 
+            <button onclick="getter()">
+                Get
+            </button>
+      
+        
+      </div>
+      <ul id="listofexpenses"></ul>
+       
+      <div id="pagination"></div>
+  
+
+    <div id="ldr"></div>
+    <ul id="listoftop"></ul>
+
+    <div id="url"></div>
+    <ul id="listofurls"></ul>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.3/axios.min.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+    <script src="./Homepage.js"></script>
+
+ 
+</body>
+
+</html>
